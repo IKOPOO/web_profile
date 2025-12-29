@@ -12,20 +12,6 @@ export default function Home() {
   const [openWindows, setOpenWindows] = useState<string[]>([])
   const [focusOrder, setFocusOrder] = useState<string[]>([])
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace("#", "")
-      const id = (hash === "home" || !hash) ? "terminal" : hash
-
-      setOpenWindows(prev => prev.includes(id) ? prev : [...prev, id])
-      focusWindow(id)
-    }
-
-    window.addEventListener("hashchange", handleHashChange)
-    handleHashChange()
-    return () => window.removeEventListener("hashchange", handleHashChange)
-  }, [])
-
   const focusWindow = (id: string) => {
     setFocusOrder(prev => {
       const filtered = prev.filter(w => w !== id)
@@ -56,6 +42,22 @@ export default function Home() {
   }
 
   const getZIndex = (id: string) => focusOrder.indexOf(id) + 10
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "")
+      const id = (hash === "home" || !hash) ? "terminal" : hash
+
+      setOpenWindows(prev => prev.includes(id) ? prev : [...prev, id])
+      focusWindow(id)
+    }
+
+    window.addEventListener("hashchange", handleHashChange)
+    handleHashChange()
+    return () => window.removeEventListener("hashchange", handleHashChange)
+  }, [])
+
+
 
   return (
     <div className="w-full h-full relative overflow-hidden">

@@ -42,12 +42,12 @@ export default function Hero() {
       {/* Quick stats - terminal style */}
       <div className="space-y-2 text-sm border-l-2 border-gray pl-4">
         <div>
-          <span className="text-gray">//</span>{" "}
+          <span className="text-gray">{"//"}</span>{" "}
           <span className="text-green">Focus:</span>{" "}
           <span className="text-fg-dim">Backend Development & DevOps</span>
         </div>
         <div>
-          <span className="text-gray">//</span>{" "}
+          <span className="text-gray">{"//"}</span>{" "}
           <span className="text-green">Status:</span>{" "}
           <span className="text-fg-dim">Learning, Building, Deploying</span>
         </div>
@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="pt-4">
         <p className="text-sm flex items-start text-fg-dim ">
           <span className="text-orange mr-2 shrink-0">❯</span>
-          <span>I built this UI with AI, don't be too amazed yet hehe</span>
+          <span>I built this UI with AI, don&apos;t be too amazed yet hehe</span>
         </p>
       </div>
     </section>

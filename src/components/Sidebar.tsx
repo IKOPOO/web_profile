@@ -3,10 +3,6 @@
 import { useState, useEffect } from "react"
 import { Terminal, User, FileText, Edit3, Folder } from "lucide-react"
 
-interface SidebarProps {
-  currentSection?: string
-}
-
 export default function Sidebar() {
   const [currentSection, setCurrentSection] = useState("home")
 

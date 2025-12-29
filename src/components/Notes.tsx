@@ -30,7 +30,7 @@ export default function Notes() {
               <div>
                 <p className="text-fg font-bold">Arc Is Not Data Copying</p>
                 <p>
-                  Arc&lt;T&gt; does not clone data — it clones the pointer. Only the reference counter is incremented; the underlying data stays in the same heap allocation. Think of it as: "Multiple owners, single data."
+                  Arc&lt;T&gt; does not clone data — it clones the pointer. Only the reference counter is incremented; the underlying data stays in the same heap allocation. Think of it as: &quot;Multiple owners, single data.&quot;
                 </p>
               </div>
 
@@ -83,7 +83,7 @@ export default function Notes() {
               <div>
                 <p className="text-fg font-bold">impl Future Explained</p>
                 <p>
-                  Async fns return anonymous Future types. impl Future hides concrete types, but all branches must return the same future type. If they don't, use Pin&lt;Box&lt;dyn Future&gt;&gt; or Enums.
+                  Async fns return anonymous Future types. impl Future hides concrete types, but all branches must return the same future type. If they don&apos;t, use Pin&lt;Box&lt;dyn Future&gt;&gt; or Enums.
                 </p>
               </div>
 
@@ -111,9 +111,9 @@ export default function Notes() {
               </div>
 
               <div>
-                <p className="text-fg font-bold">Choosing 'ureq' for CLI</p>
+                <p className="text-fg font-bold">Choosing &apos;ureq&apos; for CLI</p>
                 <p>
-                  Used ureq because it is simple, blocking, and lacks async overhead. Perfect for CLI tools where you don't need thousands of parallel requests.
+                  Used ureq because it is simple, blocking, and lacks async overhead. Perfect for CLI tools where you don&apos;t need thousands of parallel requests.
                 </p>
               </div>
 
